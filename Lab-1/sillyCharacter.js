@@ -42,6 +42,17 @@ let favoriteFood = "pizza";
 
 
 // Function to generate a random character description
+function generateRandomCharacter() {
+    const names = ["Captain Waffles", "Sir Pickle", "Lady Banana", "Professor Noodle"];
+    const foods = ["tacos", "sushi", "waffles", "spaghetti", "burgers"];
+
+    characterName = names[Math.floor(Math.random() * names.length)];
+    age = Math.floor(Math.random() * 80) + 5; // random age 5–84
+    favoriteFood = foods[Math.floor(Math.random() * foods.length)];
+    isSuperhero = Math.random() > 0.5;
+
+    updateDescription();
+}
 
 
 // Functions to update character's age
