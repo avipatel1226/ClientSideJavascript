@@ -75,4 +75,7 @@ function decreaseAge() {
 
 
 // Add event listeners for buttons using querySelector
+document.querySelector("#generateButton").addEventListener("click", generateRandomCharacter);
+document.querySelector("#increaseAgeButton").addEventListener("click", increaseAge);
+document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
 
