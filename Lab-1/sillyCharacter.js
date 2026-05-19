@@ -72,10 +72,25 @@ function decreaseAge() {
 
 
 // Function to update the character's description after changing age
+function updateCharacter() {
+    const newName = document.querySelector("#nameInput").value;
+    const newAge = parseInt(document.querySelector("#ageInput").value);
+
+    if (newName) {
+        characterName = newName;
+    }
+
+    if (!isNaN(newAge)) {
+        age = newAge;
+    }
+
+    updateDescription();
+}
 
 
 // Add event listeners for buttons using querySelector
 document.querySelector("#generateButton").addEventListener("click", generateRandomCharacter);
 document.querySelector("#increaseAgeButton").addEventListener("click", increaseAge);
 document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
+document.querySelector("#updateButton").addEventListener("click", updateCharacter);
 
