@@ -40,6 +40,17 @@ let specialPowers = ["laser eyes", "super speed", "teleportation", "mind reading
 let favoriteFood = "pizza";
 
 
+// Function to update the character's description  <-- THIS WAS MISSING
+function updateDescription() {
+    const randomPower = specialPowers[Math.floor(Math.random() * specialPowers.length)];
+    const heroStatus = isSuperhero ? "a superhero" : "not a superhero";
+
+    const description = `Meet ${characterName}, a ${age}-year-old who loves ${favoriteFood}. 
+They are ${heroStatus}, and their special power is ${randomPower}!`;
+
+    document.getElementById("characterDescription").innerText = description;
+}
+
 
 // Function to generate a random character description
 function generateRandomCharacter() {
@@ -70,7 +81,6 @@ function decreaseAge() {
 
 
 
-
 // Function to update the character's description after changing age
 function updateCharacter() {
     const newName = document.querySelector("#nameInput").value;
@@ -94,3 +104,5 @@ document.querySelector("#increaseAgeButton").addEventListener("click", increaseA
 document.querySelector("#decreaseAgeButton").addEventListener("click", decreaseAge);
 document.querySelector("#updateButton").addEventListener("click", updateCharacter);
 
+// Initialize description on page load
+updateDescription();
