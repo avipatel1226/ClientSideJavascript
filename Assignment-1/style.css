@@ -1,0 +1,42 @@
+body {
+    background: black;
+    color: #00ff66;
+    font-family: monospace;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+.panel {
+    margin: 10px 0;
+}
+
+button {
+    background: none;
+    color: #00ff66;
+    border: 1px dashed #00ff66;
+    padding: 6px 10px;
+}
+
+
+
+button:hover {
+    background: #00331f;
+}
+
+.launch {
+    background: #004d2a;
+}
+
+.reset {
+    background: #331a1a;
+    border-color: #ff4444;
+}
+
+#missionOutput {
+    margin-top: 20px;
+    white-space: pre-line;
+}
