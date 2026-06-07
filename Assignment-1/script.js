@@ -72,3 +72,43 @@ function cycleRisk() {
     riskIndex = (riskIndex + 1) % risks.length;
     riskDisplay.textContent = risks[riskIndex];
 }
+// Generate mission briefing
+function launchMission() {
+    if (
+        agentDisplay.textContent === "---" ||
+        locationDisplay.textContent === "---" ||
+        weaponDisplay.textContent === "---" ||
+        objectiveDisplay.textContent === "---" ||
+        riskDisplay.textContent === "---"
+    ) {
+        missionOutput.textContent = "⚠ ERROR: All mission parameters must be selected.";
+        return;
+    }
+
+    missionOutput.textContent =
+        `MISSION BRIEFING\n` +
+        `Agent: ${agentDisplay.textContent}\n` +
+        `Location: ${locationDisplay.textContent}\n` +
+        `Weapon: ${weaponDisplay.textContent}\n` +
+        `Objective: ${objectiveDisplay.textContent}\n` +
+        `Risk Level: ${riskDisplay.textContent}`;
+}
+
+// Reset everything
+function resetMission() {
+    agentDisplay.textContent = "---";
+    locationDisplay.textContent = "---";
+    weaponDisplay.textContent = "---";
+    objectiveDisplay.textContent = "---";
+    riskDisplay.textContent = "---";
+    missionOutput.textContent = "Awaiting input...";
+}
+
+// Event listeners
+document.getElementById("agentBtn").addEventListener("click", cycleAgent);
+document.getElementById("locationBtn").addEventListener("click", cycleLocation);
+document.getElementById("weaponBtn").addEventListener("click", cycleWeapon);
+document.getElementById("objectiveBtn").addEventListener("click", cycleObjective);
+document.getElementById("riskBtn").addEventListener("click", cycleRisk);
+document.getElementById("launchBtn").addEventListener("click", launchMission);
+document.getElementById("resetBtn").addEventListener("click", resetMission);
