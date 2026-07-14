@@ -1,4 +1,4 @@
-// Lab 3 - Sphero Bolt Obstacle Course
+// Lab 3 - Sphero Bolt Obstacle
 // Avi Patel
 
 // keeping track of what happens during the run
