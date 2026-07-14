@@ -30,8 +30,33 @@
             </select>
         </label>
 
+        <label> 
+    Crust Type:
+    <select id="crustType">
+        <option value="">Choose crust</option>
+        <option value="Thin">Thin</option>
+        <option value="Regular">Regular</option>
+        <option value="Stuffed">Stuffed</option>
+        <option value="Cheese Burst">Cheese Burst</option>
+        <option value="Whole Wheat">Whole Wheat</option>
+    </select>
+</label>
+<fieldset>
+            <legend>Toppings</legend>
+            <label><input type="checkbox" value="Pepperoni" class="topping"> Pepperoni</label>
+            <label><input type="checkbox" value="Mushrooms" class="topping"> Mushrooms</label>
+            <label><input type="checkbox" value="Onions" class="topping"> Onions</label>
+            <label><input type="checkbox" value="Green Peppers" class="topping"> Green Peppers</label>
+            <label><input type="checkbox" value="Extra Cheese" class="topping"> Extra Cheese</label>
+        </fieldset>
+
         <label>
-            Crust Type:
-            <select id="crustType">
-                <option value="">Select crust</option>
-                <option value="Thin">
+            Special Instructions:
+            <textarea id="specialInstructions"></textarea>
+        </label>
+
+        <button type="submit">Order Pizza</button>
+    </form>
+
+    <h2>Your Order</h2>
+    <p id="orderOutput"></p>

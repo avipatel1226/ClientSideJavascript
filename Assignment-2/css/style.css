@@ -1,0 +1,54 @@
+/* Page layout */
+body {
+    font-family: Arial, sans-serif;
+    background: #e8f3ff; /* soft blue */
+    margin: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Main container */
+form {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 550px;
+    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+}
+
+/* Headings */
+h1 {
+    text-align: center;
+    color: #1a2b4c; /* navy */
+    margin-bottom: 20px;
+}
+
+h2 {
+    color: #1a2b4c;
+    margin-top: 25px;
+}
+
+/* Labels and inputs */
+label, fieldset {
+    display: block;
+    margin-bottom: 15px;
+    color: #1a2b4c;
+    font-weight: bold;
+}
+
+input[type="text"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border: 1px solid #bcd0e6;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+/* Toppings layout */
+fieldset
