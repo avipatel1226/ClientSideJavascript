@@ -1,54 +1,98 @@
-/* Page layout */
+/* Full black background */
 body {
     font-family: Arial, sans-serif;
-    background: #e8f3ff; /* soft blue */
+    background: #000000;
     margin: 0;
-    padding: 30px;
+    padding: 40px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
 }
 
-/* Main container */
+/* Student info */
+#studentInfo {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+/* Main form card */
 form {
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 10px;
+    background: #111111; /* dark grey card */
+    padding: 25px;
+    border-radius: 12px;
     width: 100%;
-    max-width: 550px;
-    box-shadow: 0px 3px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.15); /* teal glow */
 }
 
 /* Headings */
-h1 {
+h1, h2 {
     text-align: center;
-    color: #1a2b4c; /* navy */
-    margin-bottom: 20px;
+    color: #00e6e6; /* teal accent */
+    margin-bottom: 15px;
 }
 
-h2 {
-    color: #1a2b4c;
-    margin-top: 25px;
-}
-
-/* Labels and inputs */
+/* Labels */
 label, fieldset {
     display: block;
     margin-bottom: 15px;
-    color: #1a2b4c;
     font-weight: bold;
+    color: #ffffff;
 }
 
+/* Inputs */
 input[type="text"],
 select,
 textarea {
     width: 100%;
     padding: 10px;
     margin-top: 6px;
-    border: 1px solid #bcd0e6;
+    border: 1px solid #333333;
     border-radius: 6px;
-    box-sizing: border-box;
+    background: #1a1a1a;
+    color: #ffffff;
     font-size: 14px;
 }
 
-/* Toppings layout */
-fieldset
+/* Toppings */
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+fieldset label {
+    font-weight: normal;
+    margin-bottom: 8px;
+}
+
+/* Button */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00b3b3; /* teal */
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+button:hover {
+    background: #00cccc;
+}
+
+/* Output box */
+#orderOutput {
+    background: #111111;
+    padding: 15px;
+    border-radius: 8px;
+    margin-top: 20px;
+    white-space: pre-line;
+    box-shadow: 0px 0px 10px rgba(0, 255, 255, 0.15);
+    max-width: 500px;
+    color: #ffffff;
+}

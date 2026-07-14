@@ -1,8 +1,8 @@
-// Add student info on page load
+// Add student info at the top of the page
 document.getElementById("studentInfo").innerText =
     "Student: Avi Patel | ID: 200627226";
 
-// Pizza class
+// Pizza class to build the order description
 class Pizza {
     constructor(name, size, crust, toppings, notes) {
         this.name = name;
@@ -12,23 +12,26 @@ class Pizza {
         this.notes = notes;
     }
 
-    // Builds a readable description of the order
     describe() {
-        let toppingText = this.toppings.length > 0
+        const toppingList = this.toppings.length > 0
             ? this.toppings.join(", ")
             : "No toppings";
 
+        const notesText = this.notes ? this.notes : "None";
+
         return `${this.name}, your ${this.size} pizza with ${this.crust} crust is on the way.
-Toppings: ${toppingText}
-Notes: ${this.notes || "None"}`;
+Toppings: ${toppingList}
+Notes: ${notesText}`;
     }
 }
 
-// Handle form submit
-document.getElementById("pizzaForm").addEventListener("submit", function (e) {
-    e.preventDefault();
+// Handle form submission
+const form = document.getElementById("pizzaForm");
 
-    // Grab values
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    // Collect form values
     const name = document.getElementById("customerName").value.trim();
     const size = document.getElementById("pizzaSize").value;
     const crust = document.getElementById("crustType").value;
@@ -57,6 +60,6 @@ document.getElementById("pizzaForm").addEventListener("submit", function (e) {
     // Create pizza object
     const pizzaOrder = new Pizza(name, size, crust, toppings, notes);
 
-    // Show description
+    // Display the order description
     document.getElementById("orderOutput").innerText = pizzaOrder.describe();
 });
